@@ -14,7 +14,7 @@ k8s_node_internal_ip: "{{ ansible_all_ipv4_addresses | difference([k8s_cluster_a
 k8s_node_api_addr: "{{ k8s_node_internal_ip }}"
 k8s_node_api_port: "{{ '1234' }}"
 k8s_node_name: "{{ inventory_hostname }}"
-# store endpoint in config value, in the future this could be a dns name
+# fancy domains be fancy
 k8s_cluster_endpoint: "{{ k8s_cluster_api_vip_addr if k8s_cluster_ha else hostvars[groups.kube_controllers[0]]['k8s_node_api_addr'] }}:{{ k8s_cluster_api_vip_port if k8s_cluster_ha else k8s_node_api_port }}"
 domain_tld: "{{ 'yourfancydomain.net' if k8s_cluster_environment == 'prod' else 'lessfancy.gov' }}"
 domain_subdomain: "{{ k8s_cluster_class }}{{ '-' + k8s_cluster_subclass if k8s_cluster_subclass is defined }}-{{ whatever else you want }}"

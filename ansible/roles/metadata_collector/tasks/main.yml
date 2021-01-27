@@ -6,7 +6,7 @@
   run_once: true
   template:
     src: values.yml.j2
-    dest: "../../core-services/values-{{ k8s_cluster_name }}.yaml"
+    dest: "../../cluster-services/values-{{ k8s_cluster_name }}.yaml"
     mode: '0644'
     force: yes
 

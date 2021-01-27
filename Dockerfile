@@ -1,3 +1,4 @@
+# this dockerfile obviously "works" but the mkdocs build would fail - intended to be an example
 FROM squidfunk/mkdocs-material:6.2.3 as builder
 ADD . /docs
 RUN pip install --upgrade pip

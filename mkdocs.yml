@@ -15,7 +15,6 @@ theme:
     text: Roboto
     code: Roboto Mono
 
-
 nav:
   - Home: index.md
   - Cluster Inventory:
@@ -23,7 +22,7 @@ nav:
       - cluster-short-name: cluster_inventory/cluster_short_name.md
 
 markdown_extensions:
-# removing the list for readability and since this is only informative
+# removing the list for readability
 
 plugins:
   - search
